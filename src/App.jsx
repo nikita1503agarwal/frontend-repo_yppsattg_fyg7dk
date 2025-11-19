@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Process from "./components/Process";
 import CTA from "./components/CTA";
+import Calculator from "./components/Calculator";
 
 function App() {
   const formRef = useRef(null);
@@ -23,6 +24,7 @@ function App() {
           <nav className="hidden sm:flex items-center gap-6 text-sm text-slate-300">
             <a href="#solutions" className="hover:text-white">Решения</a>
             <a href="#process" className="hover:text-white">Как работаем</a>
+            <a href="#calculator" className="hover:text-white">Калькулятор</a>
             <button onClick={scrollToForm} className="px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-500">Расчёт</button>
           </nav>
         </div>
@@ -32,6 +34,7 @@ function App() {
         <Hero onConsult={scrollToForm} />
         <Features />
         <div id="process"><Process /></div>
+        <Calculator onRequest={scrollToForm} />
         <div id="cta"><CTA ref={formRef} /></div>
       </main>
 
